@@ -42,7 +42,7 @@ public class Personne {
 		this.adressePostale = adressePostale;
 	}
 
-	public String getNomPrenom() {
-		return this.nom.toUpperCase() + " " + this.prenom;
+	public void getNomPrenom() {
+		System.out.println(this.nom.toUpperCase() + " " + this.prenom);
 	}
 }
