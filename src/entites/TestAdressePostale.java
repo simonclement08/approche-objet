@@ -3,17 +3,9 @@ package entites;
 public class TestAdressePostale {
 
 	public static void main(String[] args) {
-		AdressePostale adresse1 = new AdressePostale();
-		adresse1.numeroRue = 1;
-		adresse1.libelleRue = "Rue du Moulin";
-		adresse1.codePostal = 51100;
-		adresse1.ville = "Reims";
+		AdressePostale adresse1 = new AdressePostale(1, "Rue du Moulin", 51100, "Reims");
 		
-		AdressePostale adresse2 = new AdressePostale();
-		adresse2.numeroRue = 54;
-		adresse2.libelleRue = "Route Nationale";
-		adresse2.codePostal = 34200;
-		adresse2.ville = "Perpignan";
+		AdressePostale adresse2 = new AdressePostale(54, "Route Nationale", 34000, "Perpignan");
 	}
 
 }
