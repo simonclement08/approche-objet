@@ -1,7 +1,7 @@
 package fr.diginamic.banque.entites;
 
 public class CompteTaux extends Compte {
-	double tauxRemuneration;
+	private double tauxRemuneration;
 
 	public CompteTaux(String numero, double solde, double tauxRemuneration) {
 		super(numero, solde);
@@ -14,4 +14,11 @@ public class CompteTaux extends Compte {
 		return super.toString() + ", Taux : " + this.tauxRemuneration;
 	}
 
+	public double getTauxRemuneration() {
+		return tauxRemuneration;
+	}
+
+	public void setTauxRemuneration(double tauxRemuneration) {
+		this.tauxRemuneration = tauxRemuneration;
+	}
 }
