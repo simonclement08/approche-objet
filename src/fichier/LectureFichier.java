@@ -12,10 +12,7 @@ public class LectureFichier  {
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("C:/Users/Th3-E/OneDrive/Bureau/Document/java/approche-objet/src/fichier/recensement.csv");
 		
-		boolean exist = Files.exists(path);
-		System.out.println(exist);
-		
-		List<String> lines= Files.readAllLines(path, StandardCharsets.UTF_8);
+		List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
 		for (String line : lines) {
 			System.out.println(line);
 		}
