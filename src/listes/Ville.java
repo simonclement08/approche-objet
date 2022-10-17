@@ -12,7 +12,6 @@ public class Ville implements Comparable<Ville>{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return nom + " " + habitants;
 	}
 
@@ -34,6 +33,6 @@ public class Ville implements Comparable<Ville>{
 
 	@Override
 	public int compareTo(Ville ville) {
-		return this.nom.compareTo(ville.getNom());
+		return this.habitants - ville.getHabitants();
 	}
 }
