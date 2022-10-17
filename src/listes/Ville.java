@@ -1,6 +1,6 @@
 package listes;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
 	private String nom;
 	private int habitants;
 	
@@ -30,5 +30,10 @@ public class Ville {
 
 	public void setHabitants(int habitants) {
 		this.habitants = habitants;
+	}
+
+	@Override
+	public int compareTo(Ville ville) {
+		return this.nom.compareTo(ville.getNom());
 	}
 }
