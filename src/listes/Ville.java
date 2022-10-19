@@ -11,6 +11,15 @@ public class Ville implements Comparable<Ville>{
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Ville) {
+			Ville ville = (Ville) obj;
+			return nom.equals(ville.getNom()) && habitants == ville.getHabitants();
+		}
+		return false;
+	}
+
+	@Override
 	public String toString() {
 		return nom + " " + habitants;
 	}
