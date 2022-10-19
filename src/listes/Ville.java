@@ -1,18 +1,20 @@
 package listes;
 
-public class Ville implements Comparable<Ville>{
+public class Ville implements Comparable<Ville> {
 	private String nom;
 	private int habitants;
-	
-	public Ville(String nom, int habitants) {
+	private Continent continent;
+
+	public Ville(String nom, int habitants, Continent continent) {
 		super();
 		this.nom = nom;
 		this.habitants = habitants;
+		this.continent = continent;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Ville) {
+		if (obj instanceof Ville) {
 			Ville ville = (Ville) obj;
 			return nom.equals(ville.getNom()) && habitants == ville.getHabitants();
 		}
@@ -21,7 +23,7 @@ public class Ville implements Comparable<Ville>{
 
 	@Override
 	public String toString() {
-		return nom + " " + habitants;
+		return nom + " a " + habitants + " habitants et se situe en " + continent.getLibelle();
 	}
 
 	public String getNom() {
@@ -43,5 +45,13 @@ public class Ville implements Comparable<Ville>{
 	@Override
 	public int compareTo(Ville ville) {
 		return this.habitants - ville.getHabitants();
+	}
+
+	public Continent getContinent() {
+		return continent;
+	}
+
+	public void setContinent(Continent continent) {
+		this.continent = continent;
 	}
 }
